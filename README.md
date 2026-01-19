@@ -45,7 +45,7 @@ It acts very similar to the Ethereum contract:
 
 The other files like `Move.toml` are just configuration files that the Sui compiler generates automatically to manage dependencies.
 
-## Commands that we can use:
+## Commands that we can use (examples only, those from the demo):
 ```
 curl -X POST http://localhost:3001/eth-to-sui      -H "Content-Type: application/json"      -d "{\"amount\": \"100\", \"suiAddress\": \"$SUI_RECIPIENT\"}"
 ```
