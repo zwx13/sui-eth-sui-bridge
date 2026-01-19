@@ -37,11 +37,11 @@ This folder contains the **Move** code for the Sui side of the bridge.
 Unlike Ethereum, which uses Solidity, Sui uses a language called Move. This was done using the `sui move new` command.
 
 ### The Main Logic: `ibt.move`
-This was non automatic; it defines the **Interchain Bridge Token (IBT)** on the Sui blockchain.
+This was non automatic; it defines the IBT token on the Sui blockchain.
 
 It acts very similar to the Ethereum contract:
-1.  **`init` function:** Sets up the token name ("IBT") and symbol when deployed it. Gives a`TreasuryCap`.
-2.  **`TreasuryCap`:** This is like the "Admin Key." Whoever owns this object has the power to mint and burn tokens.
+1.  **`init` function:** Sets up the token name and symbol when deployed it. Gives a`TreasuryCap`.
+2.  **`TreasuryCap`:** This is like the admin key. Whoever owns this object has the power to mint and burn tokens.
 3.  **`mint`:** backend uses this function to create tokens for users when they bridge from Ethereum.
 4.  **`burn`:** backend uses this to destroy tokens when users want to leave Sui.
 
