@@ -43,13 +43,13 @@ It acts very similar to the Ethereum contract:
 3.  **`mint`:** backend uses this function to create tokens for users when they bridge from Ethereum.
 4.  **`burn`:** backend uses this to destroy tokens when users want to leave Sui.
 
+The other files like `Move.toml` are just configuration files that the Sui compiler generates automatically to manage dependencies.
+
 ## Commands that we can use:
 ```
 curl -X POST http://localhost:3001/eth-to-sui      -H "Content-Type: application/json"      -d "{\"amount\": \"100\", \"suiAddress\": \"$SUI_RECIPIENT\"}"
+```
 
 ```
 curl -X POST http://localhost:3001/sui-to-eth      -H "Content-Type: application/json"      -d "{\"amount\": \"50\", \"ethAddress\": \"$ETH_RECIPIENT\"}"
 ```
-
-
-The other files like `Move.toml` are just configuration files that the Sui compiler generates automatically to manage dependencies.
