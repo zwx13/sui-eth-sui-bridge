@@ -23,9 +23,7 @@ This folder contains the Solidity code for the Ethereum side of the bridge.
 We used **Foundry** (specifically `anvil` and `forge`) to create and manage this part of the project.
 
 ### The Main Contract: `IBT.sol`
-- stands for **"Interchain Bridge Token."**
-
-* It is a standard ERC-20 token (like a regular crypto coin); has `Ownable` permissions to it.
+* It is a standard token; has `Ownable` permissions to it.
 * It has `mint` and `burn` functions that **only the owner** (backend server) can call.
 
 Regular users cannot just print free money; only the bridge can create tokens when they are transferred from the other chain.
